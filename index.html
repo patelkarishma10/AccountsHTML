@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+
+<body>
+ <script src= "account.js"></script>
+    <form>
+        <label for="anAcc" id ="anAccLable">Enter id you want to search for: </label>
+        <input type="text" id ="anAcc" class="form-control" name="anAcc">
+        <input type="button" onclick="getAccount()" value="get an account">
+        <p>
+            <span>Account Found:</span>
+            <span id="accountFirstName"></span>
+            <span id="accountLastName"></span>
+        </p>
+        <br>
+        <input type="button" onclick="getAllAccounts()" value="get all accounts">
+        <div id="accountsDiv">
+        
+        </div>
+        
+        
+        <br><br>
+        <label for="accFirstName" id ="accFirstNameLable">FirstName: </label>
+        <input type="text" id ="accFirstName" class="form-control" name="accFirstName">
+         <br>
+        <label for="accLastName" id ="accLastNameLable">LastName: </label>
+        <input type="text" id ="accLastName" class="form-control" name="accLastName">
+         <br>
+        <label for="accNumber" id ="accNumberLable">Account Number: </label>
+        <input type="text" id ="accNumber" class="form-control" name="accNumber">
+         <br><br>
+        <input type="button" onclick="createAccount()" value="create Account">
+        
+        
+        
+        <br><br>
+        <label for="deleteAcc" id ="deleteAccLable">Enter id you want to search for: </label>
+        <input type="text" id ="deleteAcc" class="form-control" name="deleteAcc">
+        <input type="button" onclick="deleteAccount()" value="delete an account">
+        
+        
+        <br><br>
+        <label for="updateId" id ="updateIdLable">Id: </label>
+        <input type="text" id ="updateId" class="form-control" name="updateId">
+        <br>
+        <label for="updateFirstName" id ="updateFirstNameLable">FirstName: </label>
+        <input type="text" id ="updateFirstName" class="form-control" name="updateFirstName">
+         <br>
+        <label for="updateLastName" id ="updateLastNameLable">LastName: </label>
+        <input type="text" id ="updateLastName" class="form-control" name="updateLastName">
+         <br>
+        <label for="updateNumber" id ="updateNumberLable">Account Number: </label>
+        <input type="text" id ="updateNumber" class="form-control" name="updateNumber">
+         <br><br>
+        <input type="button" onclick="updateAccount()" value="update Account">
+        
+    </form>
+    
+    
+</body>
+</html>
