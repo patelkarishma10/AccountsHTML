@@ -11,6 +11,8 @@ function getAccount(){
     };
 req.open("GET",`http://localhost:8080/AccountSETemplate/api/account/searchAccounts/${id}`);
 req.send();
+    
+    return false;
 }
 
 
@@ -41,6 +43,7 @@ function getAllAccounts(){
  req.open("GET","http://localhost:8080/AccountSETemplate/api/account/getAllAccounts");
     req.send();
 
+     return false;
 }
 
 function createAccount(){
@@ -58,6 +61,8 @@ function createAccount(){
     }
      req.open("POST","http://localhost:8080/AccountSETemplate/api/account/createAccounts");
     req.send(JSON.stringify(newAcc));
+    
+    return false;
 }
 
 
@@ -72,7 +77,7 @@ function deleteAccount(){
     };
 req.open("DELETE",`http://localhost:8080/AccountSETemplate/api/account/deleteAccounts/${accountNumber}`);
 req.send();
-    
+    return false;
 }
 
 
@@ -93,5 +98,5 @@ function updateAccount(){
     };
 req.open("PUT",`http://localhost:8080/AccountSETemplate/api/account/updateAccounts/${id}`);
 req.send(JSON.stringify(updateAcc));
-    
+    return false;
 }
