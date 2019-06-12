@@ -1,0 +1,13 @@
+form {
+    border-width:medium;
+    border-color: cornflowerblue;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+input {
+    text-align: center;
+}

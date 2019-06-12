@@ -2,20 +2,24 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="index.css">
     </head>
 
 <body>
  <script src= "account.js"></script>
+    <h1>Get an Account</h1>
     <form onsubmit="return getAccount()">
         <label for="anAcc" id ="anAccLable">Enter id you want to search for: </label>
         <input type="text" id ="anAcc" class="form-control" name="anAcc" required>
-        <input type="submit" value="get an account">
+        <input type="submit" class="submitButton" value="get an account">
         <p>
             <span>Account Found:</span>
             <span id="accountFirstName"></span>
             <span id="accountLastName"></span>
         </p>
     </form>
+    
+    <h1>Get all Account</h1>
     <form onsubmit="return getAllAccounts()">
         <br>
         <input type="submit" value="get all accounts">
@@ -24,6 +28,8 @@
         </div>
         
         </form>
+    
+    <h1>Create Account</h1>
     <form onsubmit="return createAccount()">
         
         <br><br>
@@ -39,6 +45,8 @@
         <input type="submit" value="create Account">
         
        </form>
+    
+    <h1>Delete Account </h1>
     <form onsubmit="return deleteAccount()"> 
         
         <br><br>
@@ -47,6 +55,7 @@
         <input type="submit" value="delete an account">
         
         </form>
+    <h1>Update Account</h1>
     <form onsubmit="return updateAccount()">
         <br><br>
         <label for="updateId" id ="updateIdLable">Id: </label>
