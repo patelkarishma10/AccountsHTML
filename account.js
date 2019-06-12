@@ -14,13 +14,6 @@ function makeRequest(method, url, body) {
             };
 
             req.open(method, url);
-//            if (body == null) {
-//                req.send();
-//            }
-//            else {
-//                req.send(JSON.stringify(body));
-//            }
-            
             req.send(JSON.stringify(body));
         }
     );
@@ -43,16 +36,28 @@ function getAccount() {
 function getAllAccounts() {
     makeRequest("GET", "http://localhost:8080/AccountSETemplate/api/account/getAllAccounts")
         .then((data) => {
-            let allnames = " ";
-            const container = document.getElementById('accountsDiv');
-            while (container.firstChild) {
-                container.removeChild(container.firstChild);
-            }
+            const container2 = document.getElementById('accountsTable');
+        console.log(data);
+
             for (let i = 0; i < data.length; i++) {
-                let myP = document.createElement('p');
-                myP.innerHTML = data[i].firstName;
-                myP.setAttribute('name', 'acc-text')
-                container.appendChild(myP);
+            if (document.contains(document.getElementById("row" + data[i].id))){
+            container2.removeChild(document.getElementById("row" + data[i].id));
+        }
+                
+                let myRow = document.createElement('tr');
+                myRow.id ="row" + data[i].id;
+                container2.appendChild(myRow);
+                let myFirstName = document.createElement('td');
+                myFirstName.innerHTML = data[i].firstName;
+                let myLastName = document.createElement('td');
+                myLastName.innerHTML = data[i].lastName;
+                let myAccNum = document.createElement('td');
+                myAccNum.innerHTML = data[i].accountNumber;
+                
+                myRow.appendChild(myFirstName);
+                myRow.appendChild(myLastName);
+                myRow.appendChild(myAccNum);
+                
             }
         })
         .catch((error) => console.log(error.message));
